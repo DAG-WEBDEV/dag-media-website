@@ -4,17 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>D.A.G. Media - Web Development</title>
+  <!-- Google Font: Inter (matching FlyHyre's clean sans) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] } } } }
+  </script>
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body class="bg-white text-gray-900 font-sans leading-normal tracking-normal">
 
   <!-- Top Bar -->
   <div class="bg-gray-50 px-6 py-2 flex justify-between items-center">
-    <span class="text-sm">More flexibility, freedom and choice!</span>
+    <span class="text-sm">Modern, responsive, SEO-friendly websites.</span>
     <div class="space-x-3">
-      <a href="#" class="px-4 py-2 bg-black text-white rounded-full text-sm hover:bg-gray-800">Book an Aircraft</a>
-      <a href="#" class="px-4 py-2 bg-black text-white rounded-full text-sm hover:bg-gray-800">Book a Shared Flight</a>
+      <a href="#services" class="px-4 py-2 bg-black text-white rounded-full text-sm hover:bg-gray-800">Our Services</a>
+      <a href="#portfolio" class="px-4 py-2 bg-black text-white rounded-full text-sm hover:bg-gray-800">View Portfolio</a>
     </div>
   </div>
 
@@ -23,50 +28,50 @@
     <div class="md:flex items-start">
       <div class="md:w-1/2"></div>
       <div class="md:w-1/2">
-        <h1 class="text-4xl md:text-5xl font-extrabold mb-6">We believe that in a world where passengers have become numbers, a personal approach is key to ensure you get the most out of your flying experience.</h1>
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-6">We build custom websites that convert visitors into customers and grow your business online.</h1>
       </div>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
       <div>
-        <h3 class="font-bold">Flexible Solutions</h3>
-        <p class="mt-2 text-gray-600">Stop depending on airlines. Fly on your own terms or join our exclusive shared flights.</p>
+        <h3 class="font-bold">Responsive Design</h3>
+        <p class="mt-2 text-gray-600">Crafted layouts that adapt seamlessly to any device or screen size.</p>
       </div>
       <div>
-        <h3 class="font-bold">Smart Quotes</h3>
-        <p class="mt-2 text-gray-600">Know what you are paying for. No hidden fees. No overpromises. Flights suitable for your needs.</p>
+        <h3 class="font-bold">SEO Optimization</h3>
+        <p class="mt-2 text-gray-600">Boost visibility with clean code, fast load times, and on-page SEO best practices.</p>
       </div>
       <div>
-        <h3 class="font-bold">Fully Customizable</h3>
-        <p class="mt-2 text-gray-600">Control all aspects of your journey. Easily upgrade services with our add‑ons.</p>
+        <h3 class="font-bold">E-commerce Integration</h3>
+        <p class="mt-2 text-gray-600">Full shopping cart setups, payment gateways, and inventory management.</p>
       </div>
       <div>
-        <h3 class="font-bold">Personalization</h3>
-        <p class="mt-2 text-gray-600">Receive full support of our Flight Management service. We have you covered, anywhere.</p>
+        <h3 class="font-bold">Maintenance & Support</h3>
+        <p class="mt-2 text-gray-600">Ongoing updates, backups, and technical support to keep your site running smoothly.</p>
       </div>
     </div>
   </section>
 
-  <!-- Flexible Services Section -->
+  <!-- Services Showcase Section -->
   <section class="container mx-auto px-6 py-12">
-    <h2 class="text-3xl font-bold mb-8">Flexible Services</h2>
+    <h2 id="services" class="text-3xl font-bold mb-8">What We Offer</h2>
     <div class="md:flex md:space-x-4">
-      <!-- Dark panel -->
+      <!-- Design panel -->
       <div class="md:w-1/3 bg-gray-900 text-white p-8 flex flex-col justify-between">
         <div>
-          <h3 class="text-2xl font-semibold mb-4">Flexible Services</h3>
-          <p>Smart solutions for all your charter requirements.</p>
+          <h3 class="text-2xl font-semibold mb-4">Web Design</h3>
+          <p>Beautiful, brand-aligned designs that engage your audience.</p>
         </div>
-        <a href="#" class="mt-6 inline-block border border-white rounded-full px-4 py-2 text-sm hover:bg-white hover:text-gray-900">All Solutions</a>
+        <a href="#contact" class="mt-6 inline-block border border-white rounded-full px-4 py-2 text-sm hover:bg-white hover:text-gray-900">Get Started</a>
       </div>
-      <!-- Image panel -->
+      <!-- Portfolio panel -->
       <div class="md:w-1/3 mt-4 md:mt-0">
-        <img src="/images/project1.jpg" alt="On-Demand Jet" class="w-full h-full object-cover rounded-lg shadow-lg">
-        <div class="mt-2 text-center font-bold text-lg">On-Demand</div>
+        <img src="/images/project1.jpg" alt="Project Screenshot" class="w-full h-full object-cover rounded-lg shadow-lg">
+        <div class="mt-2 text-center font-bold text-lg">Project Name</div>
       </div>
-      <!-- Colored panel -->
-      <div class="md:w-1/3 bg-orange-500 text-white p-8 mt-4 md:mt-0 relative">
-        <h3 class="text-2xl font-semibold mb-4">Shared Flights</h3>
-        <p>Join exclusive flights and split costs with like-minded travelers.</p>
+      <!-- Consulting panel -->
+      <div class="md:w-1/3 bg-blue-600 text-white p-8 mt-4 md:mt-0 relative">
+        <h3 class="text-2xl font-semibold mb-4">Consulting</h3>
+        <p>Strategy sessions to plan your digital roadmap and growth targets.</p>
         <svg class="absolute top-4 right-4 w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
