@@ -4,119 +4,79 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>D.A.G. Media - Web Development</title>
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Alpine.js for interactivity -->
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body class="bg-white text-gray-900 font-sans leading-normal tracking-normal">
 
-  <!-- Header / Nav -->
-  <header class="fixed top-0 left-0 w-full bg-white shadow-lg z-50">
-    <div class="container mx-auto flex items-center justify-between p-4">
-      <a href="#" class="text-2xl font-bold">D.A.G. Media</a>
-      <nav class="hidden md:flex space-x-8">
-        <a href="#services" class="hover:text-blue-600">Services</a>
-        <a href="#portfolio" class="hover:text-blue-600">Portfolio</a>
-        <a href="#about" class="hover:text-blue-600">About</a>
-        <a href="#contact" class="hover:text-blue-600">Contact</a>
-      </nav>
-      <div class="md:hidden" x-data="{ open: false }">
-        <button @click="open = !open" class="focus:outline-none">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path x-show="!open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            <path x-show="open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-        <div x-show="open" class="absolute top-full left-0 w-full bg-white shadow-md">
-          <nav class="flex flex-col p-4 space-y-4">
-            <a href="#services" class="hover:text-blue-600">Services</a>
-            <a href="#portfolio" class="hover:text-blue-600">Portfolio</a>
-            <a href="#about" class="hover:text-blue-600">About</a>
-            <a href="#contact" class="hover:text-blue-600">Contact</a>
-          </nav>
-        </div>
-      </div>
-      <a href="#contact" class="hidden md:inline-block px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Get a Quote</a>
+  <!-- Top Bar -->
+  <div class="bg-gray-50 px-6 py-2 flex justify-between items-center">
+    <span class="text-sm">More flexibility, freedom and choice!</span>
+    <div class="space-x-3">
+      <a href="#" class="px-4 py-2 bg-black text-white rounded-full text-sm hover:bg-gray-800">Book an Aircraft</a>
+      <a href="#" class="px-4 py-2 bg-black text-white rounded-full text-sm hover:bg-gray-800">Book a Shared Flight</a>
     </div>
-  </header>
+  </div>
 
-  <!-- Hero Section -->
-  <section class="pt-28 bg-gradient-to-r from-blue-500 to-blue-700 text-white text-center">
-    <div class="container mx-auto py-24 px-4">
-      <h1 class="text-5xl md:text-6xl font-extrabold mb-4">Expert Web Development for Your Business</h1>
-      <p class="text-lg md:text-xl mb-8">We build fast, responsive, and SEO-friendly websites tailored to your needs.</p>
-      <a href="#contact" class="px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100">Request a Quote</a>
+  <!-- Hero + Feature Grid -->
+  <section class="container mx-auto px-6 py-16">
+    <div class="md:flex items-start">
+      <div class="md:w-1/2"></div>
+      <div class="md:w-1/2">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-6">We believe that in a world where passengers have become numbers, a personal approach is key to ensure you get the most out of your flying experience.</h1>
+      </div>
     </div>
-  </section>
-
-  <!-- Services Section -->
-  <section id="services" class="container mx-auto py-20 px-4">
-    <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="p-6 border rounded-lg hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold mb-2">Custom Website Design</h3>
-        <p>Create a unique online presence with pixel-perfect designs tailored to your brand.</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+      <div>
+        <h3 class="font-bold">Flexible Solutions</h3>
+        <p class="mt-2 text-gray-600">Stop depending on airlines. Fly on your own terms or join our exclusive shared flights.</p>
       </div>
-      <div class="p-6 border rounded-lg hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold mb-2">Responsive Development</h3>
-        <p>Ensure your site looks and performs flawlessly on devices of all sizes.</p>
+      <div>
+        <h3 class="font-bold">Smart Quotes</h3>
+        <p class="mt-2 text-gray-600">Know what you are paying for. No hidden fees. No overpromises. Flights suitable for your needs.</p>
       </div>
-      <div class="p-6 border rounded-lg hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold mb-2">SEO & Performance</h3>
-        <p>Optimize load times, accessibility, and search rankings to drive traffic and conversions.</p>
+      <div>
+        <h3 class="font-bold">Fully Customizable</h3>
+        <p class="mt-2 text-gray-600">Control all aspects of your journey. Easily upgrade services with our add‑ons.</p>
+      </div>
+      <div>
+        <h3 class="font-bold">Personalization</h3>
+        <p class="mt-2 text-gray-600">Receive full support of our Flight Management service. We have you covered, anywhere.</p>
       </div>
     </div>
   </section>
 
-  <!-- Portfolio Section -->
-  <section id="portfolio" class="bg-gray-50 py-20 px-4">
-    <div class="container mx-auto">
-      <h2 class="text-3xl font-bold text-center mb-12">Selected Projects</h2>
-      <div class="grid md:grid-cols-3 gap-6">
-        <!-- Example project cards -->
-        <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
-          <img src="/images/project1.jpg" alt="Project 1 screenshot" class="w-full h-48 object-cover">
-          <div class="p-4">
-            <h3 class="font-semibold mb-2">E-commerce Platform</h3>
-            <p>An end-to-end online store with custom checkout and payment integration.</p>
-          </div>
+  <!-- Flexible Services Section -->
+  <section class="container mx-auto px-6 py-12">
+    <h2 class="text-3xl font-bold mb-8">Flexible Services</h2>
+    <div class="md:flex md:space-x-4">
+      <!-- Dark panel -->
+      <div class="md:w-1/3 bg-gray-900 text-white p-8 flex flex-col justify-between">
+        <div>
+          <h3 class="text-2xl font-semibold mb-4">Flexible Services</h3>
+          <p>Smart solutions for all your charter requirements.</p>
         </div>
-        <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
-          <img src="/images/project2.jpg" alt="Project 2 screenshot" class="w-full h-48 object-cover">
-          <div class="p-4">
-            <h3 class="font-semibold mb-2">Corporate Website</h3>
-            <p>Professional site with animated hero and dynamic content modules.</p>
-          </div>
-        </div>
-        <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
-          <img src="/images/project3.jpg" alt="Project 3 screenshot" class="w-full h-48 object-cover">
-          <div class="p-4">
-            <h3 class="font-semibold mb-2">Landing Page</h3>
-            <p>High-conversion landing page optimized for lead generation and A/B testing.</p>
-          </div>
-        </div>
+        <a href="#" class="mt-6 inline-block border border-white rounded-full px-4 py-2 text-sm hover:bg-white hover:text-gray-900">All Solutions</a>
+      </div>
+      <!-- Image panel -->
+      <div class="md:w-1/3 mt-4 md:mt-0">
+        <img src="/images/project1.jpg" alt="On-Demand Jet" class="w-full h-full object-cover rounded-lg shadow-lg">
+        <div class="mt-2 text-center font-bold text-lg">On-Demand</div>
+      </div>
+      <!-- Colored panel -->
+      <div class="md:w-1/3 bg-orange-500 text-white p-8 mt-4 md:mt-0 relative">
+        <h3 class="text-2xl font-semibold mb-4">Shared Flights</h3>
+        <p>Join exclusive flights and split costs with like-minded travelers.</p>
+        <svg class="absolute top-4 right-4 w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
       </div>
     </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="container mx-auto py-20 px-4">
-    <h2 class="text-3xl font-bold text-center mb-6">Get in Touch</h2>
-    <p class="text-center mb-8">Ready to start your project? Fill out the form below and we'll get back to you within 24 hours.</p>
-    <form class="max-w-xl mx-auto grid grid-cols-1 gap-6">
-      <input type="text" placeholder="Your Name" class="p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-      <input type="email" placeholder="Your Email" class="p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-      <textarea rows="4" placeholder="Project Details" class="p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-      <button type="submit" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Send Message</button>
-    </form>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-100 py-8 px-4">
-    <div class="container mx-auto text-center text-sm text-gray-600">
-      &copy; 2025 D.A.G. Media. All rights reserved.
-    </div>
+  <footer class="bg-gray-100 py-8 text-center text-sm text-gray-600">
+    &copy; 2025 D.A.G. Media. All rights reserved.
   </footer>
 
 </body>
