@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>D.A.G. Media - Web Development</title>
-  <!-- Google Font: Inter (main font) -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <!-- Tailwind Config: define custom families BEFORE loading Tailwind -->
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Helvetica:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Tailwind Config -->
   <script>
-    tailwind = {
+    tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
@@ -21,99 +21,107 @@
   </script>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = tailwind;
-  </script>
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
-<body class="bg-white text-gray-900 font-sans leading-normal tracking-normal">
+<body class="bg-white text-gray-900 font-sans">
 
   <!-- Top Bar -->
   <div class="bg-gray-50 px-6 py-2 flex justify-between items-center">
     <span class="text-sm font-header">Modern, responsive, SEO-friendly websites.</span>
     <div class="space-x-3">
-      <a href="#services" class="px-4 py-2 bg-black text-white rounded-full text-sm hover:bg-gray-800 font-header">Our Services</a>
-      <a href="#portfolio" class="px-4 py-2 bg-black text-white rounded-full text-sm hover:bg-gray-800 font-header">View Portfolio</a>
+      <a href="#services" class="px-4 py-2 bg-black text-white rounded-full text-sm font-header hover:bg-gray-800">Our Services</a>
+      <a href="#portfolio" class="px-4 py-2 bg-black text-white rounded-full text-sm font-header hover:bg-gray-800">View Portfolio</a>
     </div>
   </div>
 
-  <!-- Hero + Feature Grid -->
-  <section class="container mx-auto px-6 py-16">
-    <div class="md:flex items-start">
+  <!-- Hero Section -->
+  <section class="container mx-auto px-6 py-20">
+    <div class="md:flex items-center">
       <div class="md:w-1/2"></div>
       <div class="md:w-1/2">
-        <h1 class="text-4xl md:text-5xl font-extrabold mb-6 font-header">We build custom websites that convert visitors into customers and grow your business online.</h1>
+        <h1 class="text-5xl font-bold font-header leading-tight">We build custom websites that convert visitors into customers and grow your business online.</h1>
       </div>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+  </section>
+
+  <!-- Feature Grid -->
+  <section class="container mx-auto px-6 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
       <div>
-        <h3 class="font-bold font-header">Responsive Design</h3>
+        <h3 class="text-xl font-bold font-header">Responsive Design</h3>
         <p class="mt-2 text-gray-600">Crafted layouts that adapt seamlessly to any device or screen size.</p>
       </div>
       <div>
-        <h3 class="font-bold font-header">SEO Optimization</h3>
+        <h3 class="text-xl font-bold font-header">SEO Optimization</h3>
         <p class="mt-2 text-gray-600">Boost visibility with clean code, fast load times, and on-page SEO best practices.</p>
       </div>
       <div>
-        <h3 class="font-bold font-header">E-commerce Integration</h3>
+        <h3 class="text-xl font-bold font-header">E-commerce Integration</h3>
         <p class="mt-2 text-gray-600">Full shopping cart setups, payment gateways, and inventory management.</p>
       </div>
       <div>
-        <h3 class="font-bold font-header">Maintenance & Support</h3>
+        <h3 class="text-xl font-bold font-header">Maintenance & Support</h3>
         <p class="mt-2 text-gray-600">Ongoing updates, backups, and technical support to keep your site running smoothly.</p>
       </div>
     </div>
   </section>
 
-  <!-- Core Experience Section -->
-  <section class="bg-gray-50 py-16">
-    <div class="container mx-auto px-6 md:flex md:space-x-8 items-center">
-      <div class="md:w-1/2">
-        <img src="/images/experience-mockup.jpg" alt="Our Process" class="rounded-lg shadow-lg">
-      </div>
+  <!-- Experience Section -->
+  <section class="bg-gray-50 py-20">
+    <div class="container mx-auto px-6 md:flex md:space-x-12 items-start">
+      <img src="/images/experience-mockup.jpg" alt="Our Process" class="md:w-1/2 rounded-lg shadow-lg">
       <div class="md:w-1/2 mt-8 md:mt-0">
-        <h2 class="text-4xl font-extrabold mb-6 font-header">D.A.G. Media Experience</h2>
-        <p class="mb-8">At D.A.G. Media we partner with you to deliver bespoke web solutions—from initial concept to ongoing optimization. Enjoy personalized service, transparent pricing, and cutting-edge technology.</p>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <!-- Features omitted for brevity -->
-        </div>
+        <h2 class="text-4xl font-bold font-header mb-4">D.A.G. Media Experience</h2>
+        <p class="text-gray-700 mb-6">From concept to launch and beyond, we guide you through every step to ensure a seamless and effective web presence.</p>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <li class="flex items-start">
+            <span class="mr-3 p-2 bg-white rounded-lg shadow"><svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <div>
+              <h3 class="font-semibold font-header">Custom Development</h3>
+              <p class="text-gray-600">Tailored code to meet your exact requirements.</p>
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="mr-3 p-2 bg-white rounded-lg shadow"><svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 8v4l3 3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <div>
+              <h3 class="font-semibold font-header">Reliable Hosting</h3>
+              <p class="text-gray-600">Fast, secure, and scalable hosting solutions.</p>
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="mr-3 p-2 bg-white rounded-lg shadow"><svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <div>
+              <h3 class="font-semibold font-header">Ongoing Support</h3>
+              <p class="text-gray-600">Continuous updates, backups, and proactive monitoring.</p>
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="mr-3 p-2 bg-white rounded-lg shadow"><svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M7 8h10M7 12h4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <div>
+              <h3 class="font-semibold font-header">Transparent Pricing</h3>
+              <p class="text-gray-600">No hidden fees—know exactly what you’re investing in.</p>
+            </div>
+          </li>
+        </ul>
       </div>
-    </div>
-  </section>
-
-  <!-- Services Showcase Section -->
-  <section class="container mx-auto px-6 py-12">
-    <h2 id="services" class="text-3xl font-bold mb-8 font-header">What We Offer</h2>
-    <div class="md:flex md:space-x-4">
-      <!-- Panels omitted for brevity -->
     </div>
   </section>
 
   <!-- Footer -->
-<footer class="bg-gray-900 text-gray-300 py-12">
-  <div class="container mx-auto px-6">
-    <div class="md:flex md:justify-between md:space-x-8">
-      <!-- Logo & Social -->
-      <div class="md:w-1/4 mb-8 md:mb-0">
+  <footer class="bg-gray-900 text-gray-300 py-12">
+    <div class="container mx-auto px-6 md:flex md:justify-between">
+      <div class="mb-8 md:mb-0">
         <h2 class="text-2xl text-white font-header mb-4">D.A.G. Media</h2>
         <div class="flex space-x-4">
-          <!-- Replace hrefs with your social links -->
-          <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-gray-700">
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><!-- instagram icon --></svg>
-          </a>
-          <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-gray-700">
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><!-- facebook icon --></svg>
-          </a>
-          <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-gray-700">
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><!-- linkedin icon --></svg>
-          </a>
+          <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-gray-700">IG</a>
+          <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-gray-700">FB</a>
+          <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-gray-700">LI</a>
         </div>
       </div>
-      <!-- Links Sections -->
-      <div class="md:w-3/4 grid grid-cols-2 sm:grid-cols-4 gap-8">
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 text-sm">
         <div>
           <h3 class="text-white font-header mb-2">Services</h3>
-          <ul class="space-y-1 text-sm">
+          <ul class="space-y-1">
             <li><a href="#" class="hover:text-white">Web Design</a></li>
             <li><a href="#" class="hover:text-white">Development</a></li>
             <li><a href="#" class="hover:text-white">SEO & Marketing</a></li>
@@ -122,7 +130,7 @@
         </div>
         <div>
           <h3 class="text-white font-header mb-2">Company</h3>
-          <ul class="space-y-1 text-sm">
+          <ul class="space-y-1">
             <li><a href="#" class="hover:text-white">About Us</a></li>
             <li><a href="#" class="hover:text-white">Portfolio</a></li>
             <li><a href="#" class="hover:text-white">Blog</a></li>
@@ -131,7 +139,7 @@
         </div>
         <div>
           <h3 class="text-white font-header mb-2">Resources</h3>
-          <ul class="space-y-1 text-sm">
+          <ul class="space-y-1">
             <li><a href="#" class="hover:text-white">Docs</a></li>
             <li><a href="#" class="hover:text-white">Support</a></li>
             <li><a href="#" class="hover:text-white">FAQ</a></li>
@@ -139,7 +147,7 @@
         </div>
         <div>
           <h3 class="text-white font-header mb-2">My Account</h3>
-          <ul class="space-y-1 text-sm">
+          <ul class="space-y-1">
             <li><a href="#" class="hover:text-white">Login</a></li>
             <li><a href="#" class="hover:text-white">Register</a></li>
             <li><a href="#" class="hover:text-white">Dashboard</a></li>
@@ -147,7 +155,6 @@
         </div>
       </div>
     </div>
-    <!-- Bottom Legal -->
     <div class="mt-12 border-t border-gray-700 pt-6 text-center text-xs text-gray-500">
       <div>&copy; 2025 D.A.G. Media. All rights reserved.</div>
       <div class="mt-2">
@@ -156,5 +163,7 @@
         <a href="#" class="mx-2 hover:text-white">Cookie Policy</a>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
+
+</body>
+</html>
